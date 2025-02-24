@@ -19,11 +19,6 @@
             <p class="text-gray-600 mb-8">Brief overview of the investment opportunities in goat farming</p>
         </header>
 
-        <!-- Banner Image -->
-        <div class="banner">
-            <img src="assets/banners/investor.webp" alt="Banner Image">
-        </div>
-
         <!-- Why Invest in Goat Farming? -->
         <section class="page-section bg-white rounded-lg shadow-lg p-6 mb-8">
             <h2 class="text-2xl font-semibold mb-6">Why Invest in Goat Farming?</h2>
@@ -104,13 +99,13 @@
     <script>
         // Load header and footer
         document.addEventListener('DOMContentLoaded', () => {
-            fetch('header.html')
+            fetch('/shared/header.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('header-placeholder').innerHTML = data;
                 });
 
-            fetch('footer.html')
+            fetch('/shared/footer.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('footer-placeholder').innerHTML = data;

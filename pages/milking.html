@@ -18,11 +18,6 @@
             <p class="text-gray-600 mb-8">Step-by-step instructions and timelines for successful goat milking</p>
         </header>
 
-        <!-- Banner Image -->
-        <div class="banner">
-            <img src="assets/banners/milking.webp" alt="Banner Image">
-        </div>
-
         <!-- Quick Navigation -->
         <section class="page-section grid md:grid-cols-3 gap-4 mb-12">
             <a href="#daily-routine" class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
@@ -182,13 +177,13 @@
     <script>
         // Load header and footer
         document.addEventListener('DOMContentLoaded', () => {
-            fetch('header.html')
+            fetch('/shared/header.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('header-placeholder').innerHTML = data;
                 });
 
-            fetch('footer.html')
+            fetch('/shared/footer.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('footer-placeholder').innerHTML = data;
