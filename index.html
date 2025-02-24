@@ -35,7 +35,7 @@
             <h2 class="text-2xl font-semibold mb-6">Health & Management</h2>
 
             <p class="text-gray-600">
-                Link to <a href="management.html" class="text-green-600 hover:text-green-700">Health & Management</a> for detailed health and management information.
+                Link to <a href="pages/management.html" class="text-green-600 hover:text-green-700">Health & Management</a> for detailed health and management information.
             </p>
         </section>
 
@@ -43,7 +43,7 @@
         <section class="page-section bg-white rounded-lg shadow-lg p-6 mb-8">
             <h2 class="text-2xl font-semibold mb-6">Milking Guide</h2>
             <p class="text-gray-600">
-                Link to <a href="milking.html" class="text-green-600 hover:text-green-700">Milking Guide</a> for detailed milking instructions.
+                Link to <a href="pages/milking.html" class="text-green-600 hover:text-green-700">Milking Guide</a> for detailed milking instructions.
             </p>
         </section>
 
@@ -51,7 +51,7 @@
         <section class="page-section bg-white rounded-lg shadow-lg p-6 mb-8">
             <h2 class="text-2xl font-semibold mb-6">Milking Stand</h2>
             <p class="text-gray-600">
-                Link to <a href="milking-stand.html" class="text-green-600 hover:text-green-700">Milking Stand</a> for DIY milking stand plans.
+                Link to <a href="pages/milking-stand.html" class="text-green-600 hover:text-green-700">Milking Stand</a> for DIY milking stand plans.
             </p>
         </section>
 
@@ -80,21 +80,5 @@
 
     <!-- JavaScript -->
     <script src="scripts.js"></script>
-    <script>
-        // Load header and footer
-        document.addEventListener('DOMContentLoaded', () => {
-            fetch('/shared/header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header-placeholder').innerHTML = data;
-                });
-
-            fetch('/shared/footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer-placeholder').innerHTML = data;
-                });
-        });
-    </script>
 </body>
 </html>
