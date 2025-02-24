@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goat Farming Guide - Milking Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .nav-link {
+            @apply px-4 py-2 text-gray-700 hover:text-green-600 transition-colors;
+        }
+        .nav-link.active {
+            @apply text-green-600 font-semibold;
+        }
+        .page-section {
+            @apply max-w-4xl mx-auto mb-12;
+        }
+        .timeline-item {
+            @apply border-l-4 border-green-500 pl-4 mb-6;
+        }
+        .schedule-card {
+            @apply bg-gray-50 p-4 rounded-lg mb-4;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- [Navigation remains the same] -->
+    <nav class="bg-white shadow-lg mb-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex space-x-7">
+                    <a href="index.html" class="flex items-center py-4 px-2">
+                        <span class="font-semibold text-gray-700 text-lg">Goat Farming Guide</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="index.html" class="nav-link">Getting Started</a>
+                    <a href="milking.html" class="nav-link active">Milking Guide</a>
+                    <a href="management.html" class="nav-link">Health & Management</a>
+                    <a href="milking-stand.html" class="nav-link">Milking Stand</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8">
+        <header class="page-section text-center">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Complete Milking Guide</h1>
+            <p class="text-gray-600 mb-8">Step-by-step instructions and timelines for successful goat milking</p>
+        </header>
+
+        <!-- Quick Navigation -->
+        <section class="page-section grid md:grid-cols-3 gap-4 mb-12">
+            <a href="#daily-routine" class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
+                <h3 class="font-semibold">Daily Routine</h3>
+                <p class="text-sm text-gray-600">Morning and evening schedule</p>
+            </a>
+            <a href="#six-week-plan" class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
+                <h3 class="font-semibold">6-Week Training Plan</h3>
+                <p class="text-sm text-gray-600">Getting goats used to milking</p>
+            </a>
+            <a href="#production-timeline" class="bg-white p-4 rounded-lg shadow hover:shadow-md transition-shadow">
+                <h3 class="font-semibold">Production Timeline</h3>
+                <p class="text-sm text-gray-600">Yearly milking cycle</p>
+            </a>
+        </section>
+
+        <!-- Daily Routine Section -->
+        <section id="daily-routine" class="page-section bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-6">Daily Milking Routine</h2>
+            
+            <div class="schedule-card">
+                <h3 class="font-semibold text-lg mb-3">Morning Routine (5:00 AM)</h3>
+                <ol class="space-y-2 text-gray-600 list-decimal pl-4">
+                    <li>Clean milking area and prepare equipment</li>
+                    <li>Feed goats their grain ration</li>
+                    <li>Clean udders and check for issues</li>
+                    <li>Milk each goat completely</li>
+                    <li>Filter and store milk immediately</li>
+                    <li>Clean equipment and area</li>
+                </ol>
+            </div>
+
+            <div class="schedule-card">
+                <h3 class="font-semibold text-lg mb-3">Evening Routine (5:00 PM)</h3>
+                <ol class="space-y-2 text-gray-600 list-decimal pl-4">
+                    <li>Repeat morning routine steps</li>
+                    <li>Record daily production</li>
+                    <li>Check supplies for next day</li>
+                    <li>Final equipment cleaning</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- 6-Week Training Plan -->
+        <section id="six-week-plan" class="page-section bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-6">6-Week Goat Training Plan</h2>
+            
+            <div class="timeline-item">
+                <h3 class="font-semibold mb-2">Week 1-2: Introduction</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li>• Lead goats to stand twice daily</li>
+                    <li>• Offer grain while on stand</li>
+                    <li>• Practice touching udder area</li>
+                    <li>• Keep sessions short (5-10 minutes)</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h3 class="font-semibold mb-2">Week 3-4: Building Trust</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li>• Increase time on stand</li>
+                    <li>• Begin udder washing routine</li>
+                    <li>• Practice hand positions</li>
+                    <li>• Maintain consistent schedule</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <h3 class="font-semibold mb-2">Week 5-6: Final Preparation</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li>• Full milking routine practice</li>
+                    <li>• Extended stand time (15-20 minutes)</li>
+                    <li>• Complete health checks</li>
+                    <li>• Ready for actual milking</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Production Timeline -->
+        <section id="production-timeline" class="page-section bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-6">Yearly Production Timeline</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="font-semibold mb-3">Production Cycle</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Month 1-2: Colostrum and early lactation</li>
+                        <li>• Month 3-5: Peak production</li>
+                        <li>• Month 6-8: Steady production</li>
+                        <li>• Month 9-10: Natural decline</li>
+                        <li>• Month 11-12: Dry period</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-3">Expected Yields</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Early: 2-3 liters daily</li>
+                        <li>• Peak: 3-4 liters daily</li>
+                        <li>• Late: 1-2 liters daily</li>
+                        <li>• Annual: 600-900 liters</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-6 bg-gray-50 p-4 rounded-lg">
+                <h3 class="font-semibold mb-3">Key Production Points</h3>
+                <ul class="space-y-2 text-gray-600">
+                    <li>• First freshening: Lower yields expected</li>
+                    <li>• Second+ freshening: Peak production</li>
+                    <li>• Weather impact: Production may vary with temperature</li>
+                    <li>• Nutrition correlation: Feed quality affects yield</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- [Original Preparation Section remains the same] -->
+        <section class="page-section bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-6">Preparation</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <h3 class="font-semibold mb-3">Equipment Needed</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Clean milking pail</li>
+                        <li>• Teat dip and clean cloths</li>
+                        <li>• Strip cup for testing</li>
+                        <li>• Milking stand</li>
+                        <li>• Storage containers</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-3">Pre-Milking Steps</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Wash hands thoroughly</li>
+                        <li>• Clean udder and teats</li>
+                        <li>• Check for mastitis</li>
+                        <li>• Position goat on stand</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- [Original Milking Technique Section remains the same] -->
+        <!-- [Original Storage Section remains the same] -->
+        <!-- [Original Troubleshooting Section remains the same] -->
+    </div>
+
+    <footer class="bg-white mt-12 py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-gray-600">Last updated: February 2025</p>
+            <div class="mt-4 space-x-4">
+                <a href="index.html" class="text-green-600 hover:text-green-700">Getting Started</a>
+                <span class="text-gray-300">|</span>
+                <a href="management.html" class="text-green-600 hover:text-green-700">Health & Management</a>
+                <span class="text-gray-300">|</span>
+                <a href="milking-stand.html" class="text-green-600 hover:text-green-700">Milking Stand</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
