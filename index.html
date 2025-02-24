@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive Goat Milking Guide</title>
+    <style>
+        :root {
+            --primary-color: #4a5568;
+            --accent-color: #48bb78;
+            --warning-color: #ed8936;
+            --info-color: #4299e1;
+        }
+        
+        .timeline {
+            position: relative;
+            margin: 2rem 0;
+            padding: 20px 0;
+        }
+        
+        .timeline-item {
+            padding: 15px 30px;
+            position: relative;
+            margin: 10px 0;
+            background: #f7fafc;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .gantt-chart {
+            width: 100%;
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+        
+        .gantt-bar {
+            height: 30px;
+            background: var(--accent-color);
+            border-radius: 4px;
+            margin: 5px 0;
+            position: relative;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+        
+        .gantt-bar:hover {
+            opacity: 1;
+        }
+        
+        .info-card {
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-2px);
+        }
+        
+        .tip-box {
+            background: #ebf8ff;
+            border-left: 4px solid var(--info-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .warning-box {
+            background: #fffaf0;
+            border-left: 4px solid var(--warning-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .accordion-header {
+            cursor: pointer;
+            padding: 1rem;
+            background: #f7fafc;
+            border-radius: 8px;
+            margin-top: 0.5rem;
+        }
+        
+        .accordion-content {
+            display: none;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 0 0 8px 8px;
+        }
+        
+        .accordion-content.active {
+            display: block;
+        }
+
+        .print-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #48bb78;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        
+        @media print {
+            .print-button {
+                display: none;
+            }
+            
+            .container {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        
+        .milestone-marker {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #fff;
+            border: 2px solid #48bb78;
+            border-radius: 50%;
+            top: -6px;
+        }
+        
+        .checklist-item {
+            transition: background-color 0.3s;
+        }
+        
+        .checklist-item:hover {
+            background-color: #f0fff4;
+        }
+        
+        .success-metric {
+            border-left: 4px solid #48bb78;
+            padding-left: 1rem;
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-8 max-w-5xl">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Comprehensive Goat Milking Guide</h1>
+            <p class="text-gray-600">From Training to Production: A Complete Guide for Small-Scale Dairy Goat Management</p>
+        </header>
+
+        <!-- Quick Start Guide Section -->
+        <section class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-6">Quick Start Guide</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Trust Building -->
+                <div class="info-card bg-green-50">
+                    <i class="mdi mdi-hand-heart text-3xl text-green-600"></i>
+                    <h3 class="font-semibold mt-2 mb-3">Build Trust</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>✓ Daily 15-minute interaction sessions</li>
+                        <li>✓ Offer favorite treats (grain, alfalfa)</li>
+                        <li>✓ Gentle touching and petting</li>
+                        <li>✓ Speak calmly and consistently</li>
+                        <li>✓ Gradual udder contact</li>
+                    </ul>
+                    <div class="tip-box mt-4 text-sm">
+                        <strong>Pro Tip:</strong> Start interactions outside of milking times to build general trust
+                    </div>
+                </div>
+
+                <!-- Routine Establishment -->
+                <div class="info-card bg-blue-50">
+                    <i class="mdi mdi-clock-outline text-3xl text-blue-600"></i>
+                    <h3 class="font-semibold mt-2 mb-3">Establish Routine</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>✓ Fixed milking times (12h intervals)</li>
+                        <li>✓ Consistent location setup</li>
+                        <li>✓ Pre-milking cleaning ritual</li>
+                        <li>✓ Post-milking rewards</li>
+                        <li>✓ Regular health checks</li>
+                    </ul>
+                    <div class="tip-box mt-4 text-sm">
+                        <strong>Best Practice:</strong> Morning (6 AM) and evening (6 PM) schedule
+                    </div>
+                </div>
+
+                <!-- Equipment Setup -->
+                <div class="info-card bg-purple-50">
+                    <i class="mdi mdi-tools text-3xl text-purple-600"></i>
+                    <h3 class="font-semibold mt-2 mb-3">Essential Equipment</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>✓ Milking stand with head gate</li>
+                        <li>✓ Stainless steel bucket</li>
+                        <li>✓ Udder cleaning supplies</li>
+                        <li>✓ Feed container</li>
+                        <li>✓ Storage containers</li>
+                    </ul>
+                    <div class="warning-box mt-4 text-sm">
+                        <strong>Important:</strong> Sanitize all equipment before use
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Milking Process -->
+        <section class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-6">Milking Process Detail</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Pre-Milking -->
+                <div class="info-card">
+                    <h3 class="font-semibold text-lg mb-3">Pre-Milking Routine</h3>
+                    <ol class="space-y-2 text-sm">
+                        <li>1. Clean milking area</li>
+                        <li>2. Prepare sanitized equipment</li>
+                        <li>3. Lead goat to stand</li>
+                        <li>4. Secure in head gate</li>
+                        <li>5. Provide grain</li>
+                        <li>6. Clean udder with warm water</li>
+                        <li>7. Dry with clean cloth</li>
+                    </ol>
+                </div>
+
+                <!-- Milking Technique -->
+                <div class="info-card">
+                    <h3 class="font-semibold text-lg mb-3">Milking Technique</h3>
+                    <ol class="space-y-2 text-sm">
+                        <li>1. Strip test first streams</li>
+                        <li>2. Position bucket</li>
+                        <li>3. Grasp teat properly</li>
+                        <li>4. Use steady rhythm</li>
+                        <li>5. Maintain gentle pressure</li>
+                        <li>6. Empty udder completely</li>
+                        <li>7. Apply teat dip</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Common Issues Section -->
+            <div class="mt-8">
+                <h3 class="text-xl font-semibold mb-4">Troubleshooting Common Issues</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="warning-box">
+                        <h4 class="font-semibold">Behavior Problems</h4>
+                        <ul class="mt-2 space-y-2 text-sm">
+                            <li>• Kicking: Ensure comfort, check for pain</li>
+                            <li>• Resistance: Review trust building steps</li>
+                            <li>• Nervousness: Add familiar elements</li>
+                        </ul>
+                    </div>
+                    <div class="warning-box">
+                        <h4 class="font-semibold">Health Concerns</h4>
+                        <ul class="mt-2 space-y-2 text-sm">
+                            <li>• Mastitis signs: Heat, swelling, abnormal milk</li>
+                            <li>• Udder injuries: Seek vet care</li>
+                            <li>• Production issues: Check diet and health</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipment and Setup -->
+        <section class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-6">DIY Milking Stand Plans</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Materials List -->
+                <div class="info-card">
+                    <h3 class="font-semibold text-lg mb-3">Materials Needed</h3>
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr>
+                                <th class="text-left">Item</th>
+                                <th class="text-left">Quantity</th>
+                                <th class="text-right">Est. Cost (ZAR)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2x4 Lumber</td>
+                                <td>4 pieces</td>
+                                <td class="text-right">R120</td>
+                            </tr>
+                            <tr>
+                                <td>Plywood</td>
+                                <td>1 sheet</td>
+                                <td class="text-right">R200</td>
+                            </tr>
+                            <tr>
+                                <td>Screws</td>
+                                <td>1 box</td>
+                                <td class="text-right">R50</td>
+                            </tr>
+                            <tr>
+                                <td>Hinges</td>
+                                <td>2 pairs</td>
+                                <td class="text-right">R80</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Construction Steps -->
+                <div class="info-card">
+                    <h3 class="font-semibold text-lg mb-3">Assembly Steps</h3>
+                    <ol class="space-y-2 text-sm">
+                        <li>1. Cut base frame (90x60cm)</li>
+                        <li>2. Attach legs (45cm height)</li>
+                        <li>3. Install platform</li>
+                        <li>4. Build head gate</li>
+                        <li>5. Add feeding tray</li>
+                        <li>6. Install optional sides</li>
+                        <li>7. Add non-slip surface</li>
+                    </ol>
+                    <div class="tip-box mt-4">
+                        <strong>Safety Tip:</strong> Sand all edges and test stability before use
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Production Timeline -->
+        <section class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-6">Annual Production Timeline</h2>
+            <div class="gantt-chart">
+                <div class="bg-gray-100 p-4 rounded-lg">
+                    <div class="gantt-bar bg-green-500" style="width: 16.67%;">
+                        <span class="absolute left-2 top-1 text-white text-sm">Training (Feb-Mar)</span>
+                    </div>
+                    <div class="gantt-bar bg-blue-500" style="width: 16.67%; margin-left: 16.67%;">
+                        <span class="absolute left-2 top-1 text-white text-sm">Breeding (Apr-May)</span>
+                    </div>
+                    <div class="gantt-bar bg-yellow-500" style="width: 33.33%; margin-left: 33.34%;">
+                        <span class="absolute left-2 top-1 text-white text-sm">Gestation (Jun-Sep)</span>
+                    </div>
+                    <div class="gantt-bar bg-purple-500" style="width: 33.33%; margin-left: 66.67%;">
+                        <span class="absolute left-2 top-1 text-white text-sm">Lactation (Oct-Jan)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center mt-12 text-gray-600">
+            <p>Last updated: February 2025</p>
+            <p class="text-sm mt-2">For more information, consult with your local veterinarian or agricultural extension office.</p>
+        </footer>
+    </div>
+
+    <button class="print-button" onclick="window.print()">
+        <i class="mdi mdi-printer"></i> Print Guide
+    </button>
+
+    <script>
+        // Add interactivity
+        document.querySelectorAll('.info-card').forEach(card => {
+            card.addEventListener('mouseover', () => {
+                card.style.transform = 'translateY(-5px)';
+                card.style.transition = 'transform 0.3s ease';
+            });
+            card.addEventListener('mouseout', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                content.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
