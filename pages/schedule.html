@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goat Farming Guide - Schedule</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bg-gray-50">
+
+    <!-- Include Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <header class="page-section text-center">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Goat Farming Schedule</h1>
+            <p class="text-gray-600 mb-8">Detailed schedule of goat farming activities</p>
+        </header>
+
+        <!-- Daily Schedule -->
+        <section class="page-section bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-6">Daily Schedule</h2>
+            <div class="schedule-card">
+                <h3 class="font-semibold text-lg mb-3">Morning Routine (5:00 AM)</h3>
+                <ol class="space-y-2 text-gray-600 list-decimal pl-4">
+                    <li>Clean milking area and prepare equipment</li>
+                    <li>Feed goats their grain ration</li>
+                    <li>Clean udders and check for issues</li>
+                    <li>Milk each goat completely</li>
+                    <li>Filter and store milk immediately</li>
+                    <li>Clean equipment and area</li>
+                </ol>
+            </div>
+
+            <div class="schedule-card">
+                <h3 class="font-semibold text-lg mb-3">Evening Routine (5:00 PM)</h3>
+                <ol class="space-y-2 text-gray-600 list-decimal pl-4">
+                    <li>Repeat morning routine steps</li>
+                    <li>Record daily production</li>
+                    <li>Check supplies for next day</li>
+                    <li>Final equipment cleaning</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Weekly Schedule -->
+        <section class="page-section bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-6">Weekly Schedule</h2>
+            <div class="schedule-card">
+                <h3 class="font-semibold text-lg mb-3">Monday</h3>
+                <ul class="space-y-2 text-gray-600 list-disc pl-4">
+                    <li>Health check for all goats</li>
+                    <li>Clean and disinfect barn</li>
+                    <li>Check and refill mineral supplements</li>
+                </ul>
+            </div>
+
+            <div class="schedule-card">
+                <h3 class="font-semibold text-lg mb-3">Wednesday</h3>
+                <ul class="space-y-2 text-gray-600 list-disc pl-4">
+                    <li>Inspect and repair fencing</li>
+                    <li>Check water supply and clean troughs</li>
+                    <li>Review feed inventory</li>
+                </ul>
+            </div>
+
+            <div class="schedule-card">
+                <h3 class="font-semibold text-lg mb-3">Friday</h3>
+                <ul class="space-y-2 text-gray-600 list-disc pl-4">
+                    <li>Hoof trimming and care</li>
+                    <li>Check for signs of illness</li>
+                    <li>Prepare for weekend tasks</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Monthly Schedule -->
+        <section class="page-section bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-6">Monthly Schedule</h2>
+            <div class="schedule-card">
+                <h3 class="font-semibold text-lg mb-3">First Week</h3>
+                <ul class="space-y-2 text-gray-600 list-disc pl-4">
+                    <li>Vaccinations and deworming</li>
+                    <li>Deep clean barn and equipment</li>
+                    <li>Review breeding plans</li>
+                </ul>
+            </div>
+
+            <div class="schedule-card">
+                <h3 class="font-semibold text-lg mb-3">Third Week</h3>
+                <ul class="space-y-2 text-gray-600 list-disc pl-4">
+                    <li>Check and repair equipment</li>
+                    <li>Review health records</li>
+                    <li>Plan for upcoming month</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Links to Other Pages -->
+        <section class="page-section bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-6">Related Pages</h2>
+            <ul class="space-y-2 text-gray-600 list-disc pl-4">
+                <li><a href="../milking.html" class="text-green-600 hover:text-green-700">Milking Guide</a></li>
+                <li><a href="../management.html" class="text-green-600 hover:text-green-700">Health & Management</a></li>
+                <li><a href="../milking-stand.html" class="text-green-600 hover:text-green-700">Milking Stand</a></li>
+                <li><a href="../investor.html" class="text-green-600 hover:text-green-700">Investor Information</a></li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle">
+        <i class="mdi mdi-weather-night"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="../scripts.js"></script>
+    <script>
+        // Load header and footer
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('../shared/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                });
+
+            fetch('../footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+                });
+        });
+    </script>
+</body>
+</html>
