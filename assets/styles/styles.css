@@ -191,6 +191,26 @@ header.dark {
     background-color: #FFEB3B;
 }
 
-tip-box.dark, .warning-box.dark, .success-metric.dark {
+.tip-box.dark, .warning-box.dark, .success-metric.dark {
     background-color: #FFC107;
+}
+
+.prev-next-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.prev-next-buttons button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.prev-next-buttons button:hover {
+    background-color: #45a049;
 }
