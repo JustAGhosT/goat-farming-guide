@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -141,6 +141,192 @@
             border-left: 4px solid #48bb78;
             padding-left: 1rem;
             margin: 0.5rem 0;
+        }
+
+        /* Theme Variables */
+        :root {
+            /* Light Theme Colors */
+            --primary-bg: #ffffff;
+            --secondary-bg: #f3f4f6;
+            --accent-bg: #e5e7eb;
+            --primary-text: #1f2937;
+            --secondary-text: #4b5563;
+            --accent-color: #48bb78;
+            --warning-color: #ed8936;
+            --info-color: #4299e1;
+            --card-bg: #ffffff;
+            --card-border: #e5e7eb;
+            --hover-bg: #f9fafb;
+            --timeline-bg: #f3f4f6;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            
+            /* Animation */
+            --transition-speed: 0.3s;
+        }
+
+        /* Dark Theme Colors */
+        html.dark {
+            --primary-bg: #1a1a1a;
+            --secondary-bg: #2d2d2d;
+            --accent-bg: #3d3d3d;
+            --primary-text: #e5e7eb;
+            --secondary-text: #9ca3af;
+            --accent-color: #4ade80;
+            --warning-color: #fb923c;
+            --info-color: #60a5fa;
+            --card-bg: #2d2d2d;
+            --card-border: #404040;
+            --hover-bg: #333333;
+            --timeline-bg: #2d2d2d;
+            --shadow-color: rgba(0, 0, 0, 0.3);
+        }
+
+        /* Smooth Transitions */
+        * {
+            transition: background-color var(--transition-speed) ease,
+                        color var(--transition-speed) ease,
+                        border-color var(--transition-speed) ease,
+                        box-shadow var(--transition-speed) ease;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--primary-text);
+        }
+
+        /* Card Styles */
+        .info-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px var(--shadow-color);
+        }
+
+        .info-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px var(--shadow-color);
+        }
+
+        /* Timeline Styles */
+        .gantt-chart {
+            background-color: var(--timeline-bg);
+            border-radius: 0.5rem;
+            padding: 1rem;
+        }
+
+        .gantt-bar {
+            height: 2.5rem;
+            border-radius: 0.25rem;
+            position: relative;
+        }
+
+        /* Dark mode specific timeline bars */
+        html.dark .gantt-bar.bg-green-500 { background-color: #059669; }
+        html.dark .gantt-bar.bg-blue-500 { background-color: #3b82f6; }
+        html.dark .gantt-bar.bg-yellow-500 { background-color: #d97706; }
+        html.dark .gantt-bar.bg-purple-500 { background-color: #8b5cf6; }
+
+        /* Phase Cards */
+        .phase-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 0.5rem;
+            padding: 1rem;
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            background-color: var(--accent-bg);
+            color: var(--primary-text);
+            cursor: pointer;
+            z-index: 1000;
+            border: 1px solid var(--card-border);
+        }
+
+        .theme-toggle:hover {
+            background-color: var(--hover-bg);
+        }
+
+        /* Print Styles */
+        @media print {
+            .theme-toggle {
+                display: none;
+            }
+
+            body {
+                background-color: white;
+                color: black;
+            }
+
+            .info-card {
+                box-shadow: none;
+                border: 1px solid #e5e7eb;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gantt-chart {
+                overflow-x: auto;
+            }
+
+            .theme-toggle {
+                top: auto;
+                bottom: 1rem;
+            }
+        }
+
+        /* Custom Components */
+        .tip-box {
+            background-color: var(--accent-bg);
+            border-left: 4px solid var(--info-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+
+        .warning-box {
+            background-color: var(--accent-bg);
+            border-left: 4px solid var(--warning-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+
+        /* Milestone Markers */
+        .milestone-marker {
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            border: 2px solid var(--accent-color);
+            background-color: var(--card-bg);
+        }
+
+        /* Table Styles */
+        table {
+            background-color: var(--card-bg);
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid var(--card-border);
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--accent-bg);
+        }
+
+        tr:hover {
+            background-color: var(--hover-bg);
         }
     </style>
 </head>
@@ -342,9 +528,279 @@
             </div>
         </section>
 
+        <!-- Updated Training Program -->
+        <section class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-6">Complete 6-Week Training Program</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Weeks 1-2 -->
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-semibold text-green-700">Weeks 1-2: Foundation Phase</h4>
+                    <p class="text-sm text-gray-600 mb-2">February 24 - March 9, 2025</p>
+                    <ul class="mt-2 space-y-2 text-sm">
+                        <li class="checklist-item p-2">
+                            <strong>Morning (6 AM):</strong>
+                            <ul class="ml-4">
+                                <li>• 10-min bonding session</li>
+                                <li>• Basic grooming</li>
+                                <li>• Treat rewards</li>
+                            </ul>
+                        </li>
+                        <li class="checklist-item p-2">
+                            <strong>Midday (12 PM):</strong>
+                            <ul class="ml-4">
+                                <li>• Touch training</li>
+                                <li>• Stand introduction</li>
+                                <li>• Light udder contact</li>
+                            </ul>
+                        </li>
+                        <li class="checklist-item p-2">
+                            <strong>Evening (6 PM):</strong>
+                            <ul class="ml-4">
+                                <li>• Feeding routine</li>
+                                <li>• Gentle handling</li>
+                                <li>• Environment familiarity</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="success-metric mt-4">
+                        <strong>Success Metrics:</strong>
+                        <ul class="text-sm mt-1">
+                            <li>✓ Accepts touching</li>
+                            <li>✓ Follows to stand</li>
+                            <li>✓ Takes treats calmly</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Weeks 3-4 -->
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-semibold text-blue-700">Weeks 3-4: Development Phase</h4>
+                    <p class="text-sm text-gray-600 mb-2">March 10 - March 23, 2025</p>
+                    <ul class="mt-2 space-y-2 text-sm">
+                        <li class="checklist-item p-2">
+                            <strong>Morning (6 AM):</strong>
+                            <ul class="ml-4">
+                                <li>• Udder massage (5 min)</li>
+                                <li>• Stand practice</li>
+                                <li>• Cleaning routine</li>
+                            </ul>
+                        </li>
+                        <li class="checklist-item p-2">
+                            <strong>Midday (12 PM):</strong>
+                            <ul class="ml-4">
+                                <li>• Extended stand time</li>
+                                <li>• Feed training</li>
+                                <li>• Equipment exposure</li>
+                            </ul>
+                        </li>
+                        <li class="checklist-item p-2">
+                            <strong>Evening (6 PM):</strong>
+                            <ul class="ml-4">
+                                <li>• Milking simulation</li>
+                                <li>• Full routine practice</li>
+                                <li>• Reward system</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="success-metric mt-4">
+                        <strong>Success Metrics:</strong>
+                        <ul class="text-sm mt-1">
+                            <li>✓ Stands 10+ minutes</li>
+                            <li>✓ Accepts udder handling</li>
+                            <li>✓ Familiar with equipment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Weeks 5-6 -->
+                <div class="bg-gray-50 p-4 rounded-lg">
+                    <h4 class="font-semibold text-purple-700">Weeks 5-6: Mastery Phase</h4>
+                    <p class="text-sm text-gray-600 mb-2">March 24 - April 6, 2025</p>
+                    <ul class="mt-2 space-y-2 text-sm">
+                        <li class="checklist-item p-2">
+                            <strong>Morning (6 AM):</strong>
+                            <ul class="ml-4">
+                                <li>• Full milking routine</li>
+                                <li>• Timing practice</li>
+                                <li>• Equipment handling</li>
+                            </ul>
+                        </li>
+                        <li class="checklist-item p-2">
+                            <strong>Midday (12 PM):</strong>
+                            <ul class="ml-4">
+                                <li>• Stand maintenance</li>
+                                <li>• Health checks</li>
+                                <li>• Stress testing</li>
+                            </ul>
+                        </li>
+                        <li class="checklist-item p-2">
+                            <strong>Evening (6 PM):</strong>
+                            <ul class="ml-4">
+                                <li>• Complete milking</li>
+                                <li>• Time tracking</li>
+                                <li>• Process refinement</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="success-metric mt-4">
+                        <strong>Success Metrics:</strong>
+                        <ul class="text-sm mt-1">
+                            <li>✓ Complete routine < 20 min</li>
+                            <li>✓ Calm throughout process</li>
+                            <li>✓ Consistent production</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New: Training Milestones Timeline -->
+            <div class="mt-8 relative">
+                <h3 class="text-xl font-semibold mb-4">2025 Production Timeline</h3>
+                <div class="gantt-chart relative">
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <div class="gantt-bar bg-green-500" style="width: 16.67%;" title="Training Phase">
+                            <span class="absolute left-2 top-1 text-white text-sm">Training (Feb 24 - Apr 6)</span>
+                            <div class="milestone-marker" style="left: 100%;"></div>
+                        </div>
+                        <div class="gantt-bar bg-blue-500" style="width: 16.67%; margin-left: 16.67%;" title="Breeding Phase">
+                            <span class="absolute left-2 top-1 text-white text-sm">Breeding (Apr 7 - May 21)</span>
+                            <div class="milestone-marker" style="left: 100%;"></div>
+                        </div>
+                        <div class="gantt-bar bg-yellow-500" style="width: 33.33%; margin-left: 33.34%;" title="Gestation Phase">
+                            <span class="absolute left-2 top-1 text-white text-sm">Gestation (May 22 - Sep 18)</span>
+                            <div class="milestone-marker" style="left: 100%;"></div>
+                        </div>
+                        <div class="gantt-bar bg-purple-500" style="width: 33.33%; margin-left: 66.67%;" title="Lactation Phase">
+                            <span class="absolute left-2 top-1 text-white text-sm">Lactation (Sep 19 - Jan 15, 2026)</span>
+                            <div class="milestone-marker" style="left: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New: Key Performance Indicators -->
+            <div class="mt-8">
+                <h3 class="text-xl font-semibold mb-4">Training Success Indicators</h3>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h4 class="font-semibold">Behavioral Metrics</h4>
+                        <ul class="text-sm mt-2">
+                            <li>• Calm demeanor during handling</li>
+                            <li>• Willing approach to stand</li>
+                            <li>• Consistent feeding routine</li>
+                            <li>• Minimal resistance</li>
+                        </ul>
+                    </div>
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h4 class="font-semibold">Production Metrics</h4>
+                        <ul class="text-sm mt-2">
+                            <li>• Complete emptying of udder</li>
+                            <li>• Consistent let-down</li>
+                            <li>• Expected volume achieved</li>
+                            <li>• Quality milk production</li>
+                        </ul>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                        <h4 class="font-semibold">Health Indicators</h4>
+                        <ul class="text-sm mt-2">
+                            <li>• Normal udder temperature</li>
+                            <li>• Clear, consistent milk</li>
+                            <li>• Good appetite</li>
+                            <li>• Regular resting patterns</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New: Troubleshooting Guide -->
+        <section class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-6">Common Issues & Solutions</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="info-card">
+                    <h3 class="font-semibold text-lg mb-3">Training Challenges</h3>
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr>
+                                <th class="text-left">Issue</th>
+                                <th class="text-left">Solution</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2">Resistance to Stand</td>
+                                <td>Increase treat rewards, shorter sessions</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2">Kicking During Milking</td>
+                                <td>Check for pain, adjust hand position</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2">Poor Let-down</td>
+                                <td>Ensure calm environment, consistent routine</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2">Udder Sensitivity</td>
+                                <td>Gentle massage, gradual pressure increase</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="info-card">
+                    <h3 class="font-semibold text-lg mb-3">Health Concerns</h3>
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr>
+                                <th class="text-left">Sign</th>
+                                <th class="text-left">Action Required</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-2">Hot Udder</td>
+                                <td>Contact vet, possible mastitis</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2">Abnormal Milk</td>
+                                <td>Separate milk, check for infection</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2">Reduced Appetite</td>
+                                <td>Monitor temp, check feed quality</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2">Lethargy</td>
+                                <td>Immediate vet consultation</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-semibold mb-6">Important Contacts</h2>
+            <div class="grid md:grid-cols-3 gap-4">
+                <div class="p-4 border rounded-lg">
+                    <h3 class="font-semibold">Emergency Vet</h3>
+                    <p class="text-sm mt-2">Keep your local vet's contact information here</p>
+                </div>
+                <div class="p-4 border rounded-lg">
+                    <h3 class="font-semibold">Dairy Inspector</h3>
+                    <p class="text-sm mt-2">Local dairy inspector's contact details</p>
+                </div>
+                <div class="p-4 border rounded-lg">
+                    <h3 class="font-semibold">Equipment Supplier</h3>
+                    <p class="text-sm mt-2">Your preferred equipment supplier's information</p>
+                </div>
+            </div>
+        </section>
+
         <footer class="text-center mt-12 text-gray-600">
-            <p>Last updated: February 2025</p>
-            <p class="text-sm mt-2">For more information, consult with your local veterinarian or agricultural extension office.</p>
+            <p>Last updated: February 24, 2025</p>
+            <p class="text-sm mt-2">This guide is intended for educational purposes. Always consult with local agricultural authorities and veterinarians for specific guidance.</p>
+            <p class="text-xs mt-4">© 2025 Dairy Goat Management Guide</p>
         </footer>
     </div>
 
@@ -370,6 +826,38 @@
                 const content = header.nextElementSibling;
                 content.classList.toggle('active');
             });
+        });
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            const isDark = html.classList.contains('dark');
+            
+            // Toggle theme
+            html.classList.toggle('dark');
+            
+            // Save preference
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
+            
+            // Update button icon
+            const button = document.querySelector('.theme-toggle');
+            button.innerHTML = `<i class="mdi ${isDark ? 'mdi-weather-sunny' : 'mdi-weather-night'}"></i>`;
+        }
+
+        // Initialize theme
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            }
+            
+            // Add theme toggle button
+            const button = document.createElement('button');
+            button.className = 'theme-toggle';
+            button.innerHTML = `<i class="mdi ${document.documentElement.classList.contains('dark') ? 'mdi-weather-sunny' : 'mdi-weather-night'}"></i>`;
+            button.onclick = toggleTheme;
+            document.body.appendChild(button);
         });
     </script>
 </body>
