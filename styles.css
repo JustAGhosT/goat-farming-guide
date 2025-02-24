@@ -134,7 +134,6 @@ section {
     margin-right: 5px;
 }
 
-/* P599d */
 .nav-link {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -160,7 +159,6 @@ section {
     margin-bottom: 3rem;
 }
 
-/* P5e43 */
 body.light {
     background-color: #f9f9f9;
     color: #333;
@@ -193,6 +191,6 @@ header.dark {
     background-color: #FFEB3B;
 }
 
-.tip-box.dark, .warning-box.dark, .success-metric.dark {
+tip-box.dark, .warning-box.dark, .success-metric.dark {
     background-color: #FFC107;
 }
