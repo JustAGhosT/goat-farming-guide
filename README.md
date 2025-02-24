@@ -19,7 +19,7 @@ This repository is structured as follows:
 - `management.html` - Health & Management
 - `milking.html` - Milking Guide
 - `milking-stand.html` - Milking Stand
-- `scripts.js` - JavaScript functionalities (e.g., theme toggle, interactivity)
+- `../assets/scripts/scipts.js` - JavaScript functionalities (e.g., theme toggle, interactivity)
 
 ## Health Monitoring & Maintenance
 Daily and preventive care steps to ensure goats stay healthy and productive.
