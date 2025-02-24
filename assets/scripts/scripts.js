@@ -40,7 +40,7 @@ function toggleTheme() {
     const button = document.querySelector('.theme-toggle');
     button.innerHTML = `<i class="mdi ${currentTheme === 'dark' ? 'mdi-weather-sunny' : 'mdi-weather-night'}"></i>`;
 }
-=======
+
 function toggleTheme() {
     const html = document.documentElement;
     const isDark = html.classList.contains('dark');
