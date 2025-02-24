@@ -19,7 +19,7 @@ This repository is structured as follows:
 - `management.html` - Health & Management
 - `milking.html` - Milking Guide
 - `milking-stand.html` - Milking Stand
-- `../assets/scripts/scipts.js` - JavaScript functionalities (e.g., theme toggle, interactivity)
+- `scripts.js` - JavaScript functionalities (e.g., theme toggle, interactivity)
 
 ## Health Monitoring & Maintenance
 Daily and preventive care steps to ensure goats stay healthy and productive.
@@ -39,8 +39,13 @@ A placeholder image for the proposed milking stand has been added under the "DIY
 ## Investor Information
 Guidelines for structuring goat farming as a profitable venture with business strategies and investment insights.
 
+## Contact Information
+For more details, feel free to reach out:
+
+📧 Email: [smit.jurie@gmail.com](mailto:smit.jurie@gmail.com)  
+🐐 Or visit Mojo on the farm to see him milk in action (a friendly quip at a friend).  
+
 ## Contribution & Future Updates
 This project is continuously updated to include best practices, emerging research, and improved techniques in goat farming. Contributions are welcome for improving and expanding the guide.
 
 For any queries or contributions, feel free to open an issue or submit a pull request.
-
