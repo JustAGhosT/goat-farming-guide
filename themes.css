@@ -1,0 +1,48 @@
+:root {
+    --bg-color-light: #f9f9f9;
+    --bg-color-dark: #333;
+    --text-color-light: #333;
+    --text-color-dark: #f9f9f9;
+    --primary-color-light: #4CAF50;
+    --primary-color-dark: #8BC34A;
+    --secondary-color-light: #2196F3;
+    --secondary-color-dark: #03A9F4;
+    --accent-color-light: #FFEB3B;
+    --accent-color-dark: #FFC107;
+}
+
+body.light {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+}
+
+body.dark {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+header.light {
+    color: var(--primary-color-light);
+}
+
+header.dark {
+    color: var(--primary-color-dark);
+}
+
+.info-card.light {
+    background-color: var(--bg-color-light);
+    border-color: var(--secondary-color-light);
+}
+
+.info-card.dark {
+    background-color: var(--bg-color-dark);
+    border-color: var(--secondary-color-dark);
+}
+
+.tip-box.light, .warning-box.light, .success-metric.light {
+    background-color: var(--accent-color-light);
+}
+
+.tip-box.dark, .warning-box.dark, .success-metric.dark {
+    background-color: var(--accent-color-dark);
+}
