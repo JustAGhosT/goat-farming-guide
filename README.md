@@ -178,3 +178,17 @@ A placeholder image for the proposed milking stand has been added to the `index.
         </div>
     </div>
 </section>
+
+## New Structure
+
+The structure of the repository has been updated to include a new page for investor information. The new structure is as follows:
+
+* `index.html`: Getting Started with Goat Farming
+* `investor.html`: Investor Information
+* `management.html`: Health & Management
+* `milking.html`: Milking Guide
+* `milking-stand.html`: Milking Stand
+
+## New `scripts.js` File
+
+A new `scripts.js` file has been added to the repository. This file contains all the JavaScript code that was previously embedded in the HTML files. The `scripts.js` file includes the `toggleTheme` function and the theme initialization code.
