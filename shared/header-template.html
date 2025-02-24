@@ -7,10 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.min.js"></script>
 </head>
 <body>
-    <header id="header-placeholder"></header>
+    <header>
+        <img src="{{bannerImage}}" alt="Goat Farming Guide Banner" class="w-full">
+    </header>
     <nav class="bg-white shadow-lg mb-8">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
@@ -30,27 +31,5 @@
             </div>
         </div>
     </nav>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const currentPage = window.location.pathname.split('/').pop().split('.').shift();
-            const banners = {
-                'index': 'assets/banners/index.png',
-                'milking': 'assets/banners/milking.png',
-                'management': 'assets/banner/management.png',
-                'milking-stand': 'assets/banners/milking-stand.png',
-                'investor': 'assets/banners/investor.png',
-                'schedule': 'assets/banners/schedule.png'
-            };
-            const bannerImage = banners[currentPage] || 'assets/banners/default.png';
-
-            fetch('/shared/header-template.html')
-                .then(response => response.text())
-                .then(templateData => {
-                    const template = Handlebars.compile(templateData);
-                    const html = template({ bannerImage });
-                    document.getElementById('header-placeholder').innerHTML = html;
-                });
-        });
-    </script>
 </body>
 </html>

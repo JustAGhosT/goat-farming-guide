@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme') || 'light';
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -11,6 +10,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const button = document.querySelector('.theme-toggle');
     button.innerHTML = `<i class="mdi ${theme === 'dark' ? 'mdi-weather-sunny' : 'mdi-weather-night'}"></i>`;
     button.onclick = toggleTheme;
+
+    // Load header and footer
+    fetch('/shared/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-placeholder').innerHTML = data;
+        });
+
+    fetch('/shared/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
 });
 
 function toggleTheme() {
