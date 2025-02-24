@@ -23,6 +23,28 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
         });
+
+    // Add event listeners to the "Previous" and "Next" buttons
+    const prevButton = document.getElementById('prev-button');
+    const nextButton = document.getElementById('next-button');
+
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            const prevPage = getPrevNextPageUrls().prev;
+            if (prevPage) {
+                window.location.href = prevPage;
+            }
+        });
+    }
+
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            const nextPage = getPrevNextPageUrls().next;
+            if (nextPage) {
+                window.location.href = nextPage;
+            }
+        });
+    }
 });
 
 function toggleTheme() {
@@ -72,3 +94,21 @@ document.addEventListener('DOMContentLoaded', () => {
     button.onclick = toggleTheme;
     document.body.appendChild(button);
 });
+
+function getPrevNextPageUrls() {
+    const pages = [
+        'investor.html',
+        'management.html',
+        'milking-stand.html',
+        'milking.html',
+        'schedule.html'
+    ];
+
+    const currentPage = window.location.pathname.split('/').pop();
+    const currentIndex = pages.indexOf(currentPage);
+
+    const prevPage = currentIndex > 0 ? pages[currentIndex - 1] : null;
+    const nextPage = currentIndex < pages.length - 1 ? pages[currentIndex + 1] : null;
+
+    return { prev: prevPage, next: nextPage };
+}
