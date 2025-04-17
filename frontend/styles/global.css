@@ -1,0 +1,218 @@
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.info-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.info-card h3 {
+    margin-top: 0;
+}
+
+.info-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.info-card ul li {
+    padding: 5px 0;
+}
+
+.tip-box, .warning-box, .success-metric {
+    background-color: #e7f3fe;
+    border-left: 5px solid #2196F3;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.tip-box {
+    background-color: #e7f3fe;
+    border-left: 5px solid #2196F3;
+}
+
+.warning-box {
+    background-color: #ffebee;
+    border-left: 5px solid #f44336;
+}
+
+.success-metric {
+    background-color: #e8f5e9;
+    border-left: 5px solid #4caf50;
+}
+
+.gantt-chart {
+    position: relative;
+    height: 50px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.gantt-bar {
+    position: absolute;
+    height: 100%;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9em;
+}
+
+.milestone-marker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #000;
+}
+
+.print-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.print-button i {
+    margin-right: 5px;
+}
+
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.theme-toggle i {
+    margin-right: 5px;
+}
+
+.nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: #4a5568;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #38a169;
+}
+
+.nav-link.active {
+    color: #38a169;
+    font-weight: 600;
+}
+
+.page-section {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+}
+
+body.light {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+body.dark {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+header.light {
+    color: #4CAF50;
+}
+
+header.dark {
+    color: #8BC34A;
+}
+
+.info-card.light {
+    background-color: #f9f9f9;
+    border-color: #2196F3;
+}
+
+.info-card.dark {
+    background-color: #333;
+    border-color: #03A9F4;
+}
+
+.tip-box.light, .warning-box.light, .success-metric.light {
+    background-color: #FFEB3B;
+}
+
+.tip-box.dark, .warning-box.dark, .success-metric.dark {
+    background-color: #FFC107;
+}
+
+.prev-next-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.prev-next-buttons button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.prev-next-buttons button:hover {
+    background-color: #45a049;
+}
