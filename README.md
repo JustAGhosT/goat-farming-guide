@@ -1,9 +1,16 @@
 # Goat Farming Guide
 
-## Overview
-The **Goat Farming Guide** is a comprehensive resource designed to assist farmers, homesteaders, and agricultural entrepreneurs in successfully managing goat farming operations. This guide covers essential topics such as milking techniques, health maintenance, milk storage, nutrition management, and business investment opportunities.
+A comprehensive resource designed to assist farmers, homesteaders, and agricultural entrepreneurs in successfully managing goat farming operations.
+
+## Project Structure
+
+This project is organized into two main components:
+
+- `/api` - Backend API built with C# Azure Functions
+- `/frontend` - Frontend web application built with Next.js
 
 ## Features
+
 - **Health Monitoring & Maintenance**: Daily and long-term care strategies.
 - **Milk Quality & Storage**: Best practices for safe and efficient milk handling.
 - **Production Records**: Structured tracking for better farm management.
@@ -13,79 +20,78 @@ The **Goat Farming Guide** is a comprehensive resource designed to assist farmer
 - **Search Functionality**: Efficient search for articles and resources.
 - **Glossary**: Comprehensive glossary of farming terms.
 
-## Usage Instructions
-1. **Health Monitoring & Maintenance**:
-   - Follow the daily and preventive care steps to ensure goats stay healthy and productive.
-   - Regularly check for common health issues and take preventive measures.
+## API (C# Azure Functions)
 
-2. **Milk Quality & Storage**:
-   - Adhere to the guidelines for maintaining milk safety, cleanliness, and freshness.
-   - Use proper storage techniques to ensure milk quality.
+The API provides endpoints for retrieving content, searching, and managing blog posts. It's built using C# Azure Functions and connects to Azure Cosmos DB for data storage.
 
-3. **Production Records**:
-   - Utilize the structured daily and monthly tracking templates for milk volume, temperature, and quality checks.
-   - Keep detailed records to monitor and improve farm management.
+See the [API README](/api/README.md) for more details.
 
-4. **Nutrition Management**:
-   - Follow the detailed feed schedules and essential dietary needs for optimal goat health.
-   - Ensure goats receive a balanced diet with necessary nutrients.
+## Frontend (Next.js)
 
-5. **DIY Milking Stand Plans**:
-   - Refer to the step-by-step guide to build a cost-effective milking stand.
-   - Use the provided materials list and assembly instructions.
+The frontend is a responsive web application built with Next.js and React. It provides a user-friendly interface for accessing the goat farming guide content.
 
-6. **Search Functionality**:
-   - Use the search bar to find articles and resources quickly.
-   - Utilize filters and sorting options to refine search results.
+See the [Frontend README](/frontend/README.md) for more details.
 
-7. **Glossary**:
-   - Access the glossary to learn essential terms and definitions related to goat farming.
-   - Use the glossary to understand technical terms and improve knowledge.
+## Getting Started
 
-## Repository Structure
-This repository is structured as follows:
+### Prerequisites
 
-- `index.html` - Getting Started with Goat Farming
-- `investor.html` - Investor Information
-- `management.html` - Health & Management
-- `milking.html` - Milking Guide
-- `milking-stand.html` - Milking Stand
-- `scripts.js` - JavaScript functionalities (e.g., theme toggle, interactivity)
+- [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0) for the API
+- [Node.js](https://nodejs.org/) (v14 or later) for the frontend
+- [Azure Functions Core Tools](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local#install-the-azure-functions-core-tools) for local API development
 
-## Health Monitoring & Maintenance
-Daily and preventive care steps to ensure goats stay healthy and productive.
+### Running the API
 
-## Milk Quality & Storage
-Guidelines for maintaining milk safety, cleanliness, and freshness.
+1. Navigate to the `/api` directory
+2. Configure the `local.settings.json` file with your connection strings and API keys
+3. Run `func start` to start the API locally
 
-## Production Records
-Structured daily and monthly tracking templates for milk volume, temperature, and quality checks.
+### Running the Frontend
 
-## Nutrition Management
-Detailed feed schedules and essential dietary needs for optimal goat health.
+1. Navigate to the `/frontend` directory
+2. Run `npm install` to install dependencies
+3. Run `npm run dev` to start the development server
+4. Open your browser to [http://localhost:3000](http://localhost:3000)
 
-## DIY Milking Stand Plans
-A placeholder image for the proposed milking stand has been added under the "DIY Milking Stand Plans" section in `index.html`. The image file is named `assets/milking-stand.jpg`.
+## Deployment
 
-## Investor Information
-Guidelines for structuring goat farming as a profitable venture with business strategies and investment insights.
+### API Deployment
 
-## Glossary
-Access the glossary to learn essential terms and definitions related to goat farming. Use the glossary to understand technical terms and improve knowledge.
+The API can be deployed to Azure Functions using the Azure CLI, Visual Studio, or the Azure Portal.
 
-## Contribution & Future Updates
-This project is continuously updated to include best practices, emerging research, and improved techniques in goat farming. Contributions are welcome for improving and expanding the guide.
+```bash
+cd api
+func azure functionapp publish <your-function-app-name>
+```
 
-For any queries or contributions, feel free to open an issue or submit a pull request.
+### Frontend Deployment
+
+The frontend can be deployed to Vercel, Netlify, or any other static site hosting service.
+
+```bash
+cd frontend
+npm run build
+# Deploy the .next directory according to your hosting provider's instructions
+```
+
+## Authentication
+
+The API includes basic authentication for certain endpoints. Currently, a hardcoded token is used for demonstration purposes.
+
+## Headless CMS Integration
+
+The project includes integration with a headless CMS (Contentful) for managing content. The API includes endpoints for retrieving content from the CMS.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Contact Information
+
 For more details, feel free to reach out:
 
-📧 Email: [smit.jurie@gmail.com](mailto:smit.jurie@gmail.com)  
-🐐 Or visit Mojo on the farm to see him milk in action (a friendly quip at a friend).  
-
-## Headless CMS Implementation
-This project uses a headless CMS to manage and deliver content. The headless CMS allows for easy content creation, management, and distribution across different platforms. The configuration for the headless CMS can be found in the `cms/config.js` file. The content is fetched from the headless CMS using the API endpoint in `api/content/getContent/index.js` and displayed on the `frontend/pages/content.js` page.
-
-## Authentication Implementation
-This project includes a basic authentication mechanism to restrict access to certain features. The authentication is currently hardcoded for demonstration purposes. Only authenticated users can add or edit blogs. The authentication check is implemented in the `api/content/addEditBlog/index.js` file and the `frontend/pages/blogs.js` page.
+📧 Email: [smit.jurie@gmail.com](mailto:smit.jurie@gmail.com)

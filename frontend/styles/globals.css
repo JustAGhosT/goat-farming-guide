@@ -1,0 +1,38 @@
+/* Tailwind CSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import existing styles */
+@import '../../assets/styles/styles.css';
+@import '../../assets/styles/themes.css';
+
+/* Base styles - these will be applied after Tailwind's base */
+@layer base {
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  /* Add your component styles here */
+}
+
+/* Custom utility styles */
+@layer utilities {
+  /* Add your utility styles here */
+}

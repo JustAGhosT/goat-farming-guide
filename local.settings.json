@@ -1,0 +1,16 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "COSMOS_CONNECTION_STRING": "",
+    "COSMOS_DATABASE_ID": "",
+    "COSMOS_CONTAINER_ID": "",
+    "SEARCH_API_KEY": "",
+    "SEARCH_ENDPOINT": "",
+    "SEARCH_INDEX_NAME": "",
+    "CONTENTFUL_SPACE_ID": "",
+    "CONTENTFUL_ACCESS_TOKEN": "",
+    "CONTENTFUL_ENVIRONMENT": "master"
+  }
+}
