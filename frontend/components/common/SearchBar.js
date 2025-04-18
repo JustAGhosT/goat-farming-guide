@@ -32,7 +32,7 @@ const SearchBar = ({ initialQuery = '', onSuggestionsFetch, suggestions }) => {
   };
 
   return (
-    <form onSubmit={handleSearch} className="flex items-center">
+    <form onSubmit={handleSearch} className="flex items-center relative">
       <input
         type="text"
         value={query}
@@ -47,7 +47,7 @@ const SearchBar = ({ initialQuery = '', onSuggestionsFetch, suggestions }) => {
         Search
       </button>
       {searchSuggestions.length > 0 && (
-        <ul className="absolute bg-white border border-gray-300 rounded mt-1 w-full">
+        <ul className="absolute bg-white border border-gray-300 rounded mt-1 w-full z-10">
           {searchSuggestions.map((suggestion, index) => (
             <li
               key={index}
