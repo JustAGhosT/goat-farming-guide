@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from '../../styles/Management.module.css';
+import styles from '../styles/Management.module.css';
 
 const Management = () => {
   return (
