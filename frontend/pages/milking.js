@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from '../../styles/Milking.module.css';
+import styles from '../styles/Milking.module.css';
 
 const MilkingGuide = () => {
   return (

@@ -8,6 +8,8 @@ const container = database.container(config.containerId);
 module.exports = async function (context, req) {
   const { topicSlug } = req.query;
 
+  context.log(`Received request with topicSlug: ${topicSlug}`);
+
   if (!topicSlug) {
     context.res = {
       status: 400,
@@ -24,7 +26,11 @@ module.exports = async function (context, req) {
       ]
     };
 
+    context.log('Executing query with querySpec:', querySpec);
+
     const { resources: relatedArticles } = await container.items.query(querySpec).fetchAll();
+
+    context.log('Fetched related articles:', relatedArticles);
 
     if (relatedArticles.length === 0) {
       context.res = {

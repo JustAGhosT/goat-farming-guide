@@ -7,9 +7,14 @@ const container = database.container(config.containerId);
 
 module.exports = async function (context, req) {
     try {
+        const query = 'SELECT * FROM c WHERE c.type = "topic"';
+        context.log('Executing query:', query);
+
         const { resources: topics } = await container.items
-            .query('SELECT * FROM c WHERE c.type = "topic"')
+            .query(query)
             .fetchAll();
+
+        context.log('Fetched topics:', topics);
 
         context.res = {
             status: 200,
