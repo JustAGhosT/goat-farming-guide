@@ -21,6 +21,29 @@ resource staticWebApp 'Microsoft.Web/staticSites@2021-03-01' = {
   }
 }
 
+resource functionAppHostingPlan 'Microsoft.Web/serverfarms@2021-02-01' = {
+  name: '${functionAppName}-plan'
+  location: location
+  kind: 'functionapp'
+  sku: {
+    name: 'Y1'
+    tier: 'Dynamic'
+  }
+}
+
+resource storageAccount 'Microsoft.Storage/storageAccounts@2021-04-01' = {
+  name: '${toLower(functionAppName)}storage'
+  location: location
+  kind: 'StorageV2'
+  sku: {
+    name: 'Standard_LRS'
+  }
+  properties: {
+    supportsHttpsTrafficOnly: true
+    minimumTlsVersion: 'TLS1_2'
+  }
+}
+
 resource functionApp 'Microsoft.Web/sites@2021-02-01' = {
   name: functionAppName
   location: location
@@ -31,7 +54,7 @@ resource functionApp 'Microsoft.Web/sites@2021-02-01' = {
       appSettings: [
         {
           name: 'AzureWebJobsStorage'
-          value: storageAccount.primaryConnectionString
+          value: 'DefaultEndpointsProtocol=https;AccountName=${storageAccount.name};EndpointSuffix=${environment().suffixes.storage};AccountKey=${listKeys(storageAccount.id, storageAccount.apiVersion).keys[0].value}'
         }
         {
           name: 'FUNCTIONS_EXTENSION_VERSION'
@@ -43,7 +66,7 @@ resource functionApp 'Microsoft.Web/sites@2021-02-01' = {
         }
         {
           name: 'CosmosDBConnectionString'
-          value: cosmosDbAccount.connectionStrings[0].connectionString
+          value: listKeys(cosmosDbAccount.id, cosmosDbAccount.apiVersion).primaryMasterKey
         }
       ]
     }

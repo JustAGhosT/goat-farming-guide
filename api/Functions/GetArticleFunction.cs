@@ -5,23 +5,20 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using GoatFarmingGuide.Database.Repositories;
+using GoatFarmingGuide.Api.Services;
 
 namespace GoatFarmingGuide.Api.Functions
 {
     public class GetArticleFunction
     {
-        private readonly IArticleRepository _articleRepository;
-        private readonly IAuthenticationService _authService;
+        private readonly ContentProviderFactory _contentProviderFactory;
         private readonly ILogger<GetArticleFunction> _logger;
 
         public GetArticleFunction(
-            IArticleRepository articleRepository,
-            IAuthenticationService authService,
+            ContentProviderFactory contentProviderFactory,
             ILogger<GetArticleFunction> logger)
         {
-            _articleRepository = articleRepository ?? throw new ArgumentNullException(nameof(articleRepository));
-            _authService = authService ?? throw new ArgumentNullException(nameof(authService));
+            _contentProviderFactory = contentProviderFactory ?? throw new ArgumentNullException(nameof(contentProviderFactory));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
@@ -31,46 +28,31 @@ namespace GoatFarmingGuide.Api.Functions
         {
             _logger.LogInformation("Processing GetArticle request");
 
-            // Authentication
-            string authHeader = req.Headers["Authorization"];
-            if (authHeader != null && authHeader.StartsWith("Bearer "))
-            {
-                string token = authHeader.Substring("Bearer ".Length);
-                if (!_authService.ValidateToken(token))
-                {
-                    return new UnauthorizedResult();
-                }
-            }
-            else
-            {
-                return new UnauthorizedResult();
-            }
-
-            // Get query parameters
             string topicSlug = req.Query["topicSlug"];
             string articleSlug = req.Query["articleSlug"];
 
-            _logger.LogInformation($"Received request with topicSlug: {topicSlug}, articleSlug: {articleSlug}");
-
             if (string.IsNullOrEmpty(topicSlug) || string.IsNullOrEmpty(articleSlug))
             {
-                return new BadRequestObjectResult("Topic slug and article slug are required.");
+                return new BadRequestObjectResult("Please provide both topicSlug and articleSlug query parameters");
             }
 
             try
             {
-                var article = await _articleRepository.GetArticleAsync(topicSlug, articleSlug);
+                // Get the appropriate content provider for articles
+                var contentProvider = _contentProviderFactory.GetContentProvider("article");
+                _logger.LogInformation($"Using content provider: {contentProvider.SourceName}");
+                var article = await contentProvider.GetArticleAsync(topicSlug, articleSlug);
 
                 if (article == null)
                 {
-                    return new NotFoundObjectResult("Article not found.");
+                    return new NotFoundResult();
                 }
 
                 return new OkObjectResult(article);
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error fetching article details");
+                _logger.LogError(ex, "Error fetching article");
                 return new StatusCodeResult(StatusCodes.Status500InternalServerError);
             }
         }

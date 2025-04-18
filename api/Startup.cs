@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using GoatFarmingGuide.Database;
 using GoatFarmingGuide.Database.Config;
 using System;
+using GoatFarmingGuide.Api.Services;
 
 [assembly: FunctionsStartup(typeof(GoatFarmingGuide.Api.Startup))]
 
@@ -35,6 +36,11 @@ namespace GoatFarmingGuide.Api
 
             // Register search services
             builder.Services.AddSingleton<ISearchService, SearchService>();
+
+            // Register content providers
+            builder.Services.AddSingleton<ContentfulContentProvider>();
+            builder.Services.AddSingleton<DatabaseContentProvider>();
+            builder.Services.AddSingleton<ContentProviderFactory>();
         }
     }
 }

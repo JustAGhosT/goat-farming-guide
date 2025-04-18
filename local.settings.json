@@ -11,6 +11,10 @@
     "SEARCH_INDEX_NAME": "",
     "CONTENTFUL_SPACE_ID": "",
     "CONTENTFUL_ACCESS_TOKEN": "",
-    "CONTENTFUL_ENVIRONMENT": "master"
+    "CONTENTFUL_ENVIRONMENT": "master",
+    "DEFAULT_CONTENT_SOURCE": "Database",
+    "ARTICLE_CONTENT_SOURCE": "Database",
+    "TOPIC_CONTENT_SOURCE": "Database",
+    "GLOSSARY_CONTENT_SOURCE": "Database"
   }
 }
