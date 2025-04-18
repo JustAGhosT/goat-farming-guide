@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from '../../styles/Investor.module.css';
+import styles from '../styles/Investor.module.css';
 
 const Investor = () => {
   return (

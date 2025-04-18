@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from '../../styles/MilkingStand.module.css';
+import styles from '../styles/MilkingStand.module.css';
 
 const MilkingStand = () => {
   return (
@@ -64,6 +64,16 @@ const MilkingStand = () => {
       <section className="page-section bg-white rounded-lg shadow-lg p-6 mb-8">
         <h2 className="text-2xl font-semibold mb-6">Placeholder Image</h2>
         <img src="assets/milking-stand.png" alt="Placeholder Milking Stand" />
+      </section>
+
+      <section className="page-section bg-white rounded-lg shadow-lg p-6 mb-8">
+        <h2 className="text-2xl font-semibold mb-6">Related Pages</h2>
+        <ul className="space-y-2 text-gray-600 list-disc pl-4">
+          <li><Link href="/milking"><a className="text-green-600 hover:text-green-700">Milking Guide</a></Link></li>
+          <li><Link href="/management"><a className="text-green-600 hover:text-green-700">Health & Management</a></Link></li>
+          <li><Link href="/schedule"><a className="text-green-600 hover:text-green-700">Goat Farming Schedule</a></Link></li>
+          <li><Link href="/investor"><a className="text-green-600 hover:text-green-700">Investor Information</a></Link></li>
+        </ul>
       </section>
 
       <div className="prev-next-buttons">

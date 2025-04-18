@@ -10,6 +10,8 @@ const indexClient = new SearchIndexClient(endpoint, new AzureKeyCredential(apiKe
 module.exports = async function (context, req) {
     const query = req.query.query || (req.body && req.body.query);
 
+    context.log(`Received search query: ${query}`);
+
     if (!query) {
         context.res = {
             status: 400,
@@ -29,6 +31,8 @@ module.exports = async function (context, req) {
         for await (const suggestion of suggestions.results) {
             results.push(suggestion);
         }
+
+        context.log('Fetched search suggestions:', results);
 
         context.res = {
             status: 200,

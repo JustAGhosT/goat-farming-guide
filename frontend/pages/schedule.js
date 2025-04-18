@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import styles from '../../styles/Schedule.module.css';
+import styles from '../styles/Schedule.module.css';
 
 const Schedule = () => {
   return (
@@ -89,10 +89,10 @@ const Schedule = () => {
       <section className="page-section bg-white rounded-lg shadow-lg p-6 mb-8">
         <h2 className="text-2xl font-semibold mb-6">Related Pages</h2>
         <ul className="space-y-2 text-gray-600 list-disc pl-4">
-          <li><Link href="../milking.html"><a className="text-green-600 hover:text-green-700">Milking Guide</a></Link></li>
-          <li><Link href="../management.html"><a className="text-green-600 hover:text-green-700">Health & Management</a></Link></li>
-          <li><Link href="../milking-stand.html"><a className="text-green-600 hover:text-green-700">Milking Stand</a></Link></li>
-          <li><Link href="../investor.html"><a className="text-green-600 hover:text-green-700">Investor Information</a></Link></li>
+          <li><Link href="/milking"><a className="text-green-600 hover:text-green-700">Milking Guide</a></Link></li>
+          <li><Link href="/management"><a className="text-green-600 hover:text-green-700">Health & Management</a></Link></li>
+          <li><Link href="/milking-stand"><a className="text-green-600 hover:text-green-700">Milking Stand</a></Link></li>
+          <li><Link href="/investor"><a className="text-green-600 hover:text-green-700">Investor Information</a></Link></li>
         </ul>
       </section>
 
