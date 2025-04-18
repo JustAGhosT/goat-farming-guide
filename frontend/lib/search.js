@@ -25,3 +25,13 @@ export const provideSearchSuggestions = async (query) => {
     throw error;
   }
 };
+
+const searchCache = new Map();
+
+export const cacheSearchResults = (query, results) => {
+  searchCache.set(query, results);
+};
+
+export const getCachedSearchResults = (query) => {
+  return searchCache.get(query);
+};
