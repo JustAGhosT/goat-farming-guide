@@ -23,6 +23,25 @@ const Home = () => {
           <li><Link href="/glossary"><a>Glossary</a></Link></li>
         </ul>
       </section>
+      <section className={styles.features}>
+        <h2>Features</h2>
+        <ul>
+          <li>Health Monitoring & Maintenance</li>
+          <li>Milk Quality & Storage</li>
+          <li>Production Records</li>
+          <li>Nutrition Management</li>
+          <li>Investor Information</li>
+          <li>DIY Milking Stand Plans</li>
+          <li>Search Functionality</li>
+          <li>Glossary</li>
+        </ul>
+      </section>
+      <section className={styles.contact}>
+        <h2>Contact Information</h2>
+        <p>For more details, feel free to reach out:</p>
+        <p>Email: <a href="mailto:smit.jurie@gmail.com">smit.jurie@gmail.com</a></p>
+        <p>Or visit Mojo on the farm to see him milk in action (a friendly quip at a friend).</p>
+      </section>
     </div>
   );
 };

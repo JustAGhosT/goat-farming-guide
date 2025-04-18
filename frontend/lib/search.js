@@ -35,3 +35,11 @@ export const cacheSearchResults = (query, results) => {
 export const getCachedSearchResults = (query) => {
   return searchCache.get(query);
 };
+
+export const logError = (error, context) => {
+  console.error(`Error in ${context}:`, error);
+};
+
+export const logInfo = (message, context) => {
+  console.log(`Info in ${context}:`, message);
+};

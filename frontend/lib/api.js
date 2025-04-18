@@ -59,3 +59,11 @@ export const fetchSearchSuggestions = async (query) => {
     throw error;
   }
 };
+
+export const logError = (error, context) => {
+  console.error(`Error in ${context}:`, error);
+};
+
+export const logInfo = (message, context) => {
+  console.log(`Info in ${context}:`, message);
+};

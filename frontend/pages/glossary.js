@@ -8,7 +8,7 @@ const Glossary = () => {
   useEffect(() => {
     const fetchTerms = async () => {
       try {
-        const response = await axios.get('/api/glossary');
+        const response = await axios.get('/api/content/getGlossary');
         setTerms(response.data);
       } catch (error) {
         console.error('Error fetching glossary terms:', error);
