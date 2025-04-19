@@ -7907,11 +7907,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev\\goat-farming-guide\\goat-farming-guide\\api\\GoatFarmingGuide.Api.csproj",
+      "projectUniqueName": "C:\\Dev\\goat-farming-guide\\goat-farming-guide-1\\api\\GoatFarmingGuide.Api.csproj",
       "projectName": "GoatFarmingGuide.Api",
-      "projectPath": "C:\\Dev\\goat-farming-guide\\goat-farming-guide\\api\\GoatFarmingGuide.Api.csproj",
+      "projectPath": "C:\\Dev\\goat-farming-guide\\goat-farming-guide-1\\api\\GoatFarmingGuide.Api.csproj",
       "packagesPath": "C:\\Users\\smitj\\.nuget\\packages\\",
-      "outputPath": "C:\\Dev\\goat-farming-guide\\goat-farming-guide\\api\\obj\\",
+      "outputPath": "C:\\Dev\\goat-farming-guide\\goat-farming-guide-1\\api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\smitj\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -7927,8 +7927,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Dev\\goat-farming-guide\\goat-farming-guide\\database\\GoatFarmingGuide.Database.csproj": {
-              "projectPath": "C:\\Dev\\goat-farming-guide\\goat-farming-guide\\database\\GoatFarmingGuide.Database.csproj"
+            "C:\\Dev\\goat-farming-guide\\goat-farming-guide-1\\database\\GoatFarmingGuide.Database.csproj": {
+              "projectPath": "C:\\Dev\\goat-farming-guide\\goat-farming-guide-1\\database\\GoatFarmingGuide.Database.csproj"
             }
           }
         }

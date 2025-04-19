@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vcji/kTtDt8=",
+  "dgSpecHash": "hzvFLuFQ1nE=",
   "success": true,
-  "projectFilePath": "C:\\Dev\\goat-farming-guide\\goat-farming-guide\\api\\GoatFarmingGuide.Api.csproj",
+  "projectFilePath": "C:\\Dev\\goat-farming-guide\\goat-farming-guide-1\\api\\GoatFarmingGuide.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\smitj\\.nuget\\packages\\azure.core\\1.36.0\\azure.core.1.36.0.nupkg.sha512",
     "C:\\Users\\smitj\\.nuget\\packages\\azure.search.documents\\11.5.0\\azure.search.documents.11.5.0.nupkg.sha512",
