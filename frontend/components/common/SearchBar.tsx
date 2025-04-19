@@ -1,7 +1,7 @@
 import { debounce } from 'lodash';
 import { useRouter } from 'next/router';
 import React, { useCallback, useState } from 'react';
-import { provideSearchSuggestions } from '../../lib/search';
+import { provideSearchSuggestions } from '../../utils/apiUtils';
 
 interface SearchBarProps {
   initialQuery?: string;

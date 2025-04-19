@@ -176,3 +176,16 @@ This allows for seamless switching between content sources without changing appl
 ## Conclusion
 
 This hybrid approach gives us the best of both worlds: structured content management for educational materials and dynamic, high-performance storage for user-generated content. By following this guide, we can maintain a consistent content strategy while leveraging the strengths of each platform.
+
+## Frontend Documentation
+
+The frontend documentation for the Goat Farming Guide application is organized into several sections. Each section corresponds to a specific aspect of the application. Below is the list of sections and their respective files:
+
+- [Breed Overview](../breed-overview.md)
+- [Feeding Strategies](../feeding-strategies.md)
+- [Health and Veterinary](../health-and-veterinary.md)
+- [Breeding Practices](../breeding-practices.md)
+- [Grazing Management](../grazing-management.md)
+- [Production Economics](../production-economics.md)
+- [Mistakes & Best Practices](../mistakes-and-best-practices.md)
+- [Integration with RegalRoots](../integration-with-regalroots.md)

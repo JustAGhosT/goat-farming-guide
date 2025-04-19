@@ -1,5 +1,31 @@
 # Goat Farming Guide
 
+## Table of Contents
+- [Project Structure](#project-structure)
+- [Features](#features)
+- [API (C# Azure Functions)](#api-c-azure-functions)
+- [Frontend (Next.js)](#frontend-nextjs)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Running the API](#running-the-api)
+  - [Running the Frontend](#running-the-frontend)
+- [Deployment](#deployment)
+  - [API Deployment](#api-deployment)
+  - [Frontend Deployment](#frontend-deployment)
+- [Authentication](#authentication)
+- [Headless CMS Integration](#headless-cms-integration)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact Information](#contact-information)
+- [Breed Overview](#breed-overview)
+- [Feeding Strategies](#feeding-strategies)
+- [Health and Veterinary](#health-and-veterinary)
+- [Breeding Practices](#breeding-practices)
+- [Grazing Management](#grazing-management)
+- [Production Economics](#production-economics)
+- [Mistakes & Best Practices](#mistakes-and-best-practices)
+- [Integration with RegalRoots](#integration-with-regalroots)
+
 A comprehensive resource designed to assist farmers, homesteaders, and agricultural entrepreneurs in successfully managing goat farming operations.
 
 ## Project Structure

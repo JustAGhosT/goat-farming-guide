@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { fetchTopics } from '../../lib/api';
+import { fetchTopics } from '../../utils/apiUtils';
 import styles from '../../styles/TopicNav.module.css';
 
 interface Topic {
