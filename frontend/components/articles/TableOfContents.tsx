@@ -17,7 +17,7 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headings }) => {
       <h2>Table of Contents</h2>
       <ul>
         {headings.map((heading, index) => (
-          <li key={index}>
+          <li key={index} className={styles[`level${heading.level}`]}>
             <a href={`#${heading.id}`}>{heading.title}</a>
           </li>
         ))}

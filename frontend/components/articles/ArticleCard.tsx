@@ -9,6 +9,8 @@ interface Article {
   excerpt: string;
   topicId: string;
   featuredImage: string;
+  author: string;
+  publishedDate: string;
 }
 
 interface ArticleCardProps {
@@ -23,6 +25,8 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
         <div className={styles.content}>
           <h3 className={styles.title}>{article.title}</h3>
           <p className={styles.excerpt}>{article.excerpt}</p>
+          <p className={styles.author}>By {article.author}</p>
+          <p className={styles.publishedDate}>{new Date(article.publishedDate).toLocaleDateString()}</p>
         </div>
       </Link>
     </div>
