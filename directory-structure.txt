@@ -1,0 +1,46 @@
+goat-farming-guide/
+├── README.md
+├── breed-overview/
+│   ├── README.md
+│   └── boer-goat-characteristics.md
+├── feeding-strategies/
+│   ├── README.md
+│   ├── forage-options.md
+│   └── milking-guidelines.md
+├── health-and-veterinary/
+│   ├── README.md
+│   ├── vaccinations.md
+│   └── common-ailments.md
+├── breeding-practices/
+│   ├── README.md
+│   ├── breeding-schedules.md
+│   └── training-procedures.md
+├── grazing-management/
+│   ├── README.md
+│   ├── rotational-grazing.md
+│   └── veld-and-fodder.md
+├── production-economics/
+│   ├── README.md
+│   ├── economic-basics.md
+│   ├── meat-production.md
+│   ├── dairy-production.md
+│   └── cost-tracking.md
+├── mistakes-and-best-practices/
+│   ├── README.md
+│   ├── common-mistakes.md
+│   └── operational-advice.md
+├── integration-with-regalroots/
+│   ├── README.md
+│   ├── data-schema-examples.md
+│   └── operational-integration.md
+├── data-schemas/
+│   ├── example-goat.json
+│   └── example-plot.yaml
+└── images/
+    ├── breed/
+    ├── feeding/
+    ├── health/
+    ├── breeding/
+    ├── grazing/
+    ├── economics/
+    └── misc/
