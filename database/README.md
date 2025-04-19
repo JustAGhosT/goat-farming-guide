@@ -66,3 +66,36 @@ The database connection is configured through environment variables:
 - Microsoft.Azure.Cosmos - For Azure Cosmos DB access
 - Microsoft.Extensions.Configuration - For configuration management
 - Microsoft.Extensions.Logging - For logging
+
+## Example Usage
+
+```csharp
+// In API layer
+public class ArticleFunction
+{
+    private readonly IArticleRepository _articleRepository;
+
+    public ArticleFunction(IArticleRepository articleRepository)
+    {
+        _articleRepository = articleRepository;
+    }
+
+    [FunctionName("GetArticle")]
+    public async Task<IActionResult> Run(
+        [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "article")] HttpRequest req,
+        ILogger log)
+    {
+        string topicSlug = req.Query["topicSlug"];
+        string articleSlug = req.Query["articleSlug"];
+
+        var article = await _articleRepository.GetArticleAsync(topicSlug, articleSlug);
+        
+        if (article == null)
+        {
+            return new NotFoundResult();
+        }
+
+        return new OkObjectResult(article);
+    }
+}
+```

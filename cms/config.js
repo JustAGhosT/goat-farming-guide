@@ -60,4 +60,9 @@ module.exports = {
       glossary: 'glossary',
     },
   },
+  search: {
+    apiKey: process.env.SEARCH_API_KEY,
+    endpoint: process.env.SEARCH_ENDPOINT,
+    indexName: process.env.SEARCH_INDEX_NAME,
+  },
 };
